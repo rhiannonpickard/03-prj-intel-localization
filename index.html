@@ -1,191 +1,751 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" id="html-root">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intel: Sustainability Through the Ages</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intel Global Website</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Header and Navigation -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-intel-blue">
+            <div class="container">
+                <a class="navbar-brand" href="#" aria-label="Intel Homepage">
+                    <span class="fw-bold fs-3" style="color: white; font-family: Arial, sans-serif;">Intel</span>
+                </a>
+                
+                <!-- Language Toggle Button -->
+                <button type="button" class="btn btn-outline-light me-3" id="language-toggle" aria-label="Switch language direction">
+                    <i class="bi bi-translate"></i> <span id="lang-text">العربية</span>
+                </button>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products" data-en="Products" data-ar="المنتجات">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#innovation" data-en="Innovation" data-ar="الابتكار">Innovation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#newsletter" data-en="Newsletter" data-ar="النشرة الإخبارية">Newsletter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <!-- Header / Hero Section -->
-  <header>
-    <div>
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
-      <!-- Main Heading -->
-      <h1>
-        Sustainability Through the Ages
-      </h1>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="row align-items-center min-vh-75">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold text-intel-blue mb-4" data-en="Powering Global Innovation" data-ar="تشغيل الابتكار العالمي">
+                            Powering Global Innovation
+                        </h1>
+                        <p class="lead mb-4" data-en="Intel processors and technologies enable breakthrough innovations across the globe, connecting people and possibilities." data-ar="تمكن معالجات وتقنيات إنتل من الابتكارات الرائدة في جميع أنحاء العالم، وتربط بين الأشخاص والإمكانيات.">
+                            Intel processors and technologies enable breakthrough innovations across the globe, connecting people and possibilities.
+                        </p>
+                        <button type="button" class="btn btn-intel-blue btn-lg" data-bs-toggle="modal" data-bs-target="#innovation-modal" data-en="Explore Innovation" data-ar="استكشف الابتكار">
+                            Explore Innovation
+                        </button>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://picsum.photos/600/400?random=1" 
+                             alt="Intel Innovation Technology" 
+                             class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <!-- Subheading / Description -->
-      <p>
-        Explore Intel's journey through time, discovering how our commitment
-        to innovation has shaped a more sustainable future for technology 
-        and our planet.
-      </p>
+        <!-- Three-Column Products Section -->
+        <section id="products" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5 text-intel-blue" data-en="Our Product Portfolio" data-ar="محفظة منتجاتنا">
+                    Our Product Portfolio
+                </h2>
+                
+                <div class="row g-4">
+                    <!-- Column 1: Processors -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <i class="bi bi-cpu text-intel-blue" style="font-size: 3rem;"></i>
+                                </div>
+                                <h4 class="card-title">
+                                    <i class="bi bi-processor me-2"></i>
+                                    <span data-en="Advanced Processors" data-ar="معالجات متقدمة">Advanced Processors</span>
+                                </h4>
+                                <p class="card-text" data-en="High-performance CPUs designed for computing excellence across desktop, mobile, and server applications." data-ar="وحدات معالجة مركزية عالية الأداء مصممة للتميز الحاسوبي عبر تطبيقات سطح المكتب والهاتف المحمول والخادم.">
+                                    High-performance CPUs designed for computing excellence across desktop, mobile, and server applications.
+                                </p>
+                                <a href="#" class="btn btn-outline-intel-blue" data-en="Learn More" data-ar="اعرف أكثر">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Graphics -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <i class="bi bi-display text-intel-blue" style="font-size: 3rem;"></i>
+                                </div>
+                                <h4 class="card-title">
+                                    <i class="bi bi-gpu-card me-2"></i>
+                                    <span data-en="Graphics Solutions" data-ar="حلول الرسومات">Graphics Solutions</span>
+                                </h4>
+                                <p class="card-text" data-en="Cutting-edge graphics technology for gaming, content creation, and professional visualization needs." data-ar="تقنية رسومات متطورة للألعاب وإنشاء المحتوى واحتياجات التصور المهني.">
+                                    Cutting-edge graphics technology for gaming, content creation, and professional visualization needs.
+                                </p>
+                                <a href="#" class="btn btn-outline-intel-blue" data-en="Learn More" data-ar="اعرف أكثر">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: AI Solutions -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <i class="bi bi-robot text-intel-blue" style="font-size: 3rem;"></i>
+                                </div>
+                                <h4 class="card-title">
+                                    <i class="bi bi-lightning me-2"></i>
+                                    <span data-en="AI & Machine Learning" data-ar="الذكاء الاصطناعي والتعلم الآلي">AI & Machine Learning</span>
+                                </h4>
+                                <p class="card-text" data-en="Intelligent solutions powered by AI acceleration for transformative business and research applications." data-ar="حلول ذكية مدعومة بتسريع الذكاء الاصطناعي لتطبيقات الأعمال والبحث التحويلية.">
+                                    Intelligent solutions powered by AI acceleration for transformative business and research applications.
+                                </p>
+                                <a href="#" class="btn btn-outline-intel-blue" data-en="Learn More" data-ar="اعرف أكثر">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovation Carousel Section -->
+        <section id="innovation" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 text-intel-blue" data-en="Innovation Highlights" data-ar="أبرز الابتكارات">
+                    Innovation Highlights
+                </h2>
+                
+                <div id="innovation-carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#innovation-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#innovation-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#innovation-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://picsum.photos/1200/400?random=2" class="d-block w-100" alt="Quantum Computing Innovation">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 data-en="Quantum Computing" data-ar="الحاسوب الكمي">Quantum Computing</h5>
+                                <p data-en="Advancing the frontiers of computational possibility." data-ar="تطوير حدود الإمكانيات الحاسوبية.">Advancing the frontiers of computational possibility.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/1200/400?random=3" class="d-block w-100" alt="5G Technology Innovation">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 data-en="5G Connectivity" data-ar="اتصال 5G">5G Connectivity</h5>
+                                <p data-en="Enabling ultra-fast, low-latency global communications." data-ar="تمكين الاتصالات العالمية فائقة السرعة ومنخفضة زمن الاستجابة.">Enabling ultra-fast, low-latency global communications.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/1200/400?random=4" class="d-block w-100" alt="Edge Computing Innovation">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 data-en="Edge Computing" data-ar="الحاسوب الطرفي">Edge Computing</h5>
+                                <p data-en="Bringing intelligence closer to where data is created." data-ar="جلب الذكاء أقرب إلى حيث يتم إنشاء البيانات.">Bringing intelligence closer to where data is created.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#innovation-carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#innovation-carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Subscription Section -->
+        <section id="newsletter" class="py-5 bg-intel-blue text-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-center mb-4" data-en="Stay Connected with Intel" data-ar="ابق على اتصال مع إنتل">
+                            Stay Connected with Intel
+                        </h2>
+                        <p class="text-center mb-5" data-en="Get the latest updates on technology innovations, product launches, and industry insights." data-ar="احصل على آخر التحديثات حول الابتكارات التقنية وإطلاق المنتجات ورؤى الصناعة.">
+                            Get the latest updates on technology innovations, product launches, and industry insights.
+                        </p>
+                        
+                        <form id="newsletter-form" class="bg-white p-4 rounded shadow">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label text-dark" data-en="First Name" data-ar="الاسم الأول">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required 
+                                           aria-describedby="firstName-help" data-en-placeholder="Enter your first name" data-ar-placeholder="أدخل اسمك الأول">
+                                    <div id="firstName-help" class="form-text text-muted">
+                                        <span data-en="We'll use this to personalize your experience." data-ar="سنستخدم هذا لتخصيص تجربتك.">We'll use this to personalize your experience.</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label text-dark" data-en="Email Address" data-ar="عنوان البريد الإلكتروني">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" required 
+                                           aria-describedby="email-help" data-en-placeholder="Enter your email" data-ar-placeholder="أدخل بريدك الإلكتروني">
+                                    <div id="email-help" class="form-text text-muted">
+                                        <span data-en="Your email will never be shared with third parties." data-ar="لن يتم مشاركة بريدك الإلكتروني مع أطراف ثالثة.">Your email will never be shared with third parties.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="updates-consent" name="updates" required>
+                                        <label class="form-check-label text-dark" for="updates-consent">
+                                            <span data-en="I agree to receive marketing updates and newsletters from Intel." data-ar="أوافق على تلقي التحديثات التسويقية والنشرات الإخبارية من إنتل.">
+                                                I agree to receive marketing updates and newsletters from Intel.
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-4">
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-intel-blue btn-lg px-5" data-en="Subscribe Now" data-ar="اشترك الآن">
+                                        <i class="bi bi-envelope me-2"></i>Subscribe Now
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h5 data-en="Intel Corporation" data-ar="شركة إنتل">Intel Corporation</h5>
+                    <p data-en="Advancing technology innovation to create a better world for everyone." data-ar="تطوير الابتكار التكنولوجي لخلق عالم أفضل للجميع.">
+                        Advancing technology innovation to create a better world for everyone.
+                    </p>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <h5 data-en="Follow Us" data-ar="تابعنا">Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0" data-en="© 2025 Intel Corporation. All rights reserved." data-ar="© 2025 شركة إنتل. جميع الحقوق محفوظة.">
+                        © 2025 Intel Corporation. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Innovation Modal -->
+    <div class="modal fade" id="innovation-modal" tabindex="-1" aria-labelledby="innovation-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="innovation-modal-label" data-en="Intel Innovation Hub" data-ar="مركز ابتكار إنتل">Intel Innovation Hub</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p data-en="Discover how Intel's breakthrough technologies are shaping the future of computing, from artificial intelligence to quantum processing." data-ar="اكتشف كيف تشكل تقنيات إنتل الرائدة مستقبل الحاسوب، من الذكاء الاصطناعي إلى المعالجة الكمية.">
+                        Discover how Intel's breakthrough technologies are shaping the future of computing, from artificial intelligence to quantum processing.
+                    </p>
+                    <img src="https://picsum.photos/600/300?random=5" class="img-fluid mb-3" alt="Intel Innovation Details">
+                    <p data-en="Our commitment to research and development drives continuous innovation across all product lines." data-ar="التزامنا بالبحث والتطوير يقود الابتكار المستمر عبر جميع خطوط الإنتاج.">
+                        Our commitment to research and development drives continuous innovation across all product lines.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-en="Close" data-ar="إغلاق">Close</button>
+                    <button type="button" class="btn btn-intel-blue" data-en="Learn More" data-ar="اعرف أكثر">Learn More</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <!-- Timeline Cards Section -->
-  <section>
-    <!-- Card 1: 1968 -->
-    <div>
-      <h2>1968</h2>
-      <h3>Intel Founded</h3>
-      <img src="img/1.jpg" alt="Placeholder Image" />
-      <p>
-        Robert Noyce and Gordon Moore rename the newly formed company 
-        NM Electronics to Intel Corporation, laying the foundation for 
-        decades of technological innovation.
-      </p>
-    </div>
+    <!-- Reflections Section -->
+    <section id="reflections" class="py-5 bg-secondary text-white">
+        <div class="container">
+            <h2 class="text-center mb-4">Reflections</h2>
 
-    <!-- Card 2: 1971 -->
-    <div>
-      <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <img src="img/2.jpg" alt="Placeholder Image" />
-      <p>
-        Intel debuts the 4004, the world's first commercial microprocessor, 
-        igniting the microprocessor revolution and propelling the future 
-        of computing devices.
-      </p>
-    </div>
+            <!-- Reflection 1: Probabilistic AI -->
+            <div class="mb-4">
+                <h3 class="h5">Reflection 1: Probabilistic AI</h3>
+                <p>
+                    For this project, I considered how probabilistic AI could assist in web development. 
+                    Tools like GitHub Copilot use predictive models to suggest code based on prior patterns, 
+                    speeding up development while reducing errors. While Copilot helped me scaffold HTML, CSS, 
+                    and Bootstrap components efficiently, I made deliberate choices to ensure accessibility, 
+                    RTL support, and responsive design — areas where AI suggestions sometimes require human review. 
+                    This project reinforced the importance of using AI as a partner rather than a replacement, 
+                    especially when designing inclusive and globally accessible websites.
+                </p>
+            </div>
 
-    <!-- Card 3: 1978 -->
-    <div>
-      <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <img src="img/3.jpg" alt="Placeholder Image" />
-      <p>
-        Launch of the 8086 processor, establishing the x86 architecture 
-        that drives countless PCs and servers in the modern era.
-      </p>
-    </div>
+            <!-- Reflection 2: Interview Question -->
+            <div class="mb-4">
+                <h3 class="h5">Reflection 2: Interview Question</h3>
+                <p>
+                    <strong>Question:</strong> "How would you ensure a website is accessible to a global audience?"<br>
+                    <strong>Answer:</strong> I would implement semantic HTML, provide text alternatives for images, 
+                    use color schemes with sufficient contrast, and design forms with proper labels and aria attributes. 
+                    For global audiences, I would support multiple languages and include right-to-left (RTL) layouts 
+                    for languages like Arabic or Hebrew. Testing tools like Lighthouse can help measure accessibility performance, 
+                    and responsiveness across devices ensures usability for all users.
+                </p>
+            </div>
 
-    <!-- Card 4: 1985 -->
-    <div>
-      <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <img src="img/4.jpg" alt="Placeholder Image" />
-      <p>
-        Intel introduces the 386 processor with 32-bit architecture, 
-        ushering in a new era of performance and multitasking for 
-        personal computers.
-      </p>
-    </div>
+            <!-- Reflection 3: LinkedIn Post -->
+            <div>
+                <h3 class="h5">Reflection 3: LinkedIn Post</h3>
+                <p>
+                    "Excited to share my latest web development project for Intel! I adapted a global landing page 
+                    to support right-to-left languages, implemented accessible forms, and designed a responsive 
+                    three-column layout using Bootstrap. This project strengthened my skills in inclusive design, 
+                    responsive development, and using AI tools like GitHub Copilot to accelerate coding while 
+                    maintaining quality. Accessibility and global usability are priorities in modern web design — 
+                    proud to have applied them in this project!"
+                </p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Card 5: 2006 -->
-    <div>
-      <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        This year marks Intel's highest annual greenhouse gas emissions 
-        for operations. Over subsequent years, Intel invests heavily in 
-        chemical abatement, renewable energy, and energy-efficient 
-        manufacturing to reverse this trend.
-      </p>
-    </div>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
 
-    <!-- Card 6: 2020 -->
-    <div>
-      <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-        progress on climate action, water stewardship, and waste reduction.
-      </p>
-    </div>
+    <!-- Language and RTL/LTR Support -->
+    <script>
+        class IntelLocalization {
+            constructor() {
+                this.currentLang = 'en';
+                this.currentDir = 'ltr';
+                this.init();
+            }
 
-    <!-- Card 7: 2022 -->
-    <div>
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
-        by 2040, building on years of environmental initiatives.
-      </p>
-    </div>
+            init() {
+                this.detectBrowserLanguage();
+                this.setupEventListeners();
+                this.setupSmoothScrolling();
+                this.setupFormValidation();
+                this.updatePlaceholders();
+            }
 
-    <!-- Card 8: 2023 -->
-    <div>
-      <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
-        toward Intel's long-term sustainability goals.
-      </p>
-    </div>
+            detectBrowserLanguage() {
+                const browserLang = navigator.language || navigator.userLanguage;
+                const isArabic = browserLang.startsWith('ar') || 
+                                browserLang.includes('ar') ||
+                                browserLang.startsWith('he') ||
+                                browserLang.startsWith('fa');
+                
+                if (isArabic) {
+                    this.switchLanguage('ar', 'rtl');
+                }
+            }
 
-    <!-- Card 9: 2024 -->
-    <div>
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
-        next-generation sustainable semiconductor manufacturing.
-      </p>
-    </div>
-  </section>
+            setupEventListeners() {
+                // Language toggle button
+                const languageToggle = document.getElementById('language-toggle');
+                if (languageToggle) {
+                    languageToggle.addEventListener('click', () => {
+                        this.toggleLanguage();
+                    });
+                }
 
-  <!-- 3-Column Content Section -->
-  <section>
-    <div>
-      
-      <!-- Column 1 -->
-      <div>
-        <h2>RISE Strategy</h2>
-        <p>
-          Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
-          Intel sets ambitious 2030 goals, including driving industry-wide 
-          progress on climate action, water stewardship, and waste reduction.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
+                // Newsletter form submission
+                const newsletterForm = document.getElementById('newsletter-form');
+                if (newsletterForm) {
+                    newsletterForm.addEventListener('submit', (e) => {
+                        this.handleNewsletterSubmission(e);
+                    });
+                }
 
-      <!-- Column 2 -->
-      <div>
-        <h2>Commitment</h2>
-        <p>
-          In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
-          (Scope 1 and 2) by 2040. This commitment builds on decades of 
-          environmental initiatives and partnerships across the semiconductor 
-          industry.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
+                // Smooth scrolling for navigation links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const target = document.querySelector(anchor.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            }
 
-      <!-- Column 3 -->
-      <div>
-        <h2>Water &amp; Waste</h2>
-        <p>
-          Intel conserves billions of gallons of water annually and 
-          collaborates with local communities to restore watersheds.
-          Intel also upcycles and recycles materials to reduce waste and 
-          advance a circular economy.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
+            toggleLanguage() {
+                if (this.currentLang === 'en') {
+                    this.switchLanguage('ar', 'rtl');
+                } else {
+                    this.switchLanguage('en', 'ltr');
+                }
+            }
 
-    </div>
-  </section>
+            switchLanguage(lang, dir) {
+                this.currentLang = lang;
+                this.currentDir = dir;
 
-  <!-- Subscription Form -->
-  <section>
-    <h2>Subscribe to our Newsletter</h2>
-    <!-- Add form here -->
-  </section>
-</body>
-</html>
+                // Update HTML attributes
+                const htmlRoot = document.getElementById('html-root');
+                const body = document.body;
+                
+                htmlRoot.setAttribute('lang', lang);
+                htmlRoot.setAttribute('dir', dir);
+                body.setAttribute('dir', dir);
+
+                // Update all translatable elements
+                this.updateTextContent();
+                this.updatePlaceholders();
+                this.updateLanguageToggleButton();
+
+                // Store preference in localStorage
+                localStorage.setItem('preferred-language', lang);
+                localStorage.setItem('preferred-direction', dir);
+
+                // Announce change to screen readers
+                this.announceLanguageChange(lang);
+            }
+
+            updateTextContent() {
+                const elements = document.querySelectorAll('[data-en][data-ar]');
+                elements.forEach(element => {
+                    const text = element.getAttribute(`data-${this.currentLang}`);
+                    if (text) {
+                        element.textContent = text;
+                    }
+                });
+            }
+
+            updatePlaceholders() {
+                const inputs = document.querySelectorAll(`[data-${this.currentLang}-placeholder]`);
+                inputs.forEach(input => {
+                    const placeholder = input.getAttribute(`data-${this.currentLang}-placeholder`);
+                    if (placeholder) {
+                        input.setAttribute('placeholder', placeholder);
+                    }
+                });
+            }
+
+            updateLanguageToggleButton() {
+                const langText = document.getElementById('lang-text');
+                if (langText) {
+                    langText.textContent = this.currentLang === 'en' ? 'العربية' : 'English';
+                }
+            }
+
+            announceLanguageChange(lang) {
+                const announcement = lang === 'ar' ? 
+                    'تم تغيير اللغة إلى العربية' : 
+                    'Language changed to English';
+                
+                // Create temporary announcement for screen readers
+                const announcer = document.createElement('div');
+                announcer.setAttribute('aria-live', 'polite');
+                announcer.setAttribute('aria-atomic', 'true');
+                announcer.className = 'sr-only';
+                announcer.textContent = announcement;
+                
+                document.body.appendChild(announcer);
+                setTimeout(() => {
+                    document.body.removeChild(announcer);
+                }, 1000);
+            }
+
+            setupSmoothScrolling() {
+                // Enhanced smooth scrolling with offset for fixed header
+                const offset = 80; // Height of fixed navbar
+                
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = anchor.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            const targetPosition = targetElement.offsetTop - offset;
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            }
+
+            setupFormValidation() {
+                const form = document.getElementById('newsletter-form');
+                if (!form) return;
+
+                const firstName = document.getElementById('firstName');
+                const email = document.getElementById('email');
+                const consent = document.getElementById('updates-consent');
+
+                // Real-time validation
+                firstName.addEventListener('blur', () => this.validateName(firstName));
+                email.addEventListener('blur', () => this.validateEmail(email));
+                
+                // Custom validation messages
+                this.setupCustomValidationMessages();
+            }
+
+            validateName(input) {
+                const value = input.value.trim();
+                const isValid = value.length >= 2 && /^[a-zA-Z\u0600-\u06FF\s]+$/.test(value);
+                
+                this.setValidationState(input, isValid, 
+                    this.currentLang === 'en' ? 
+                        'Please enter a valid name (at least 2 characters)' :
+                        'يرجى إدخال اسم صحيح (حرفان على الأقل)'
+                );
+                
+                return isValid;
+            }
+
+            validateEmail(input) {
+                const value = input.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const isValid = emailRegex.test(value);
+                
+                this.setValidationState(input, isValid,
+                    this.currentLang === 'en' ?
+                        'Please enter a valid email address' :
+                        'يرجى إدخال عنوان بريد إلكتروني صحيح'
+                );
+                
+                return isValid;
+            }
+
+            setValidationState(input, isValid, message) {
+                const feedback = input.nextElementSibling?.nextElementSibling || 
+                                this.createFeedbackElement(input);
+                
+                if (isValid) {
+                    input.classList.remove('is-invalid');
+                    input.classList.add('is-valid');
+                    feedback.style.display = 'none';
+                } else {
+                    input.classList.remove('is-valid');
+                    input.classList.add('is-invalid');
+                    feedback.textContent = message;
+                    feedback.style.display = 'block';
+                    feedback.className = 'invalid-feedback';
+                }
+            }
+
+            createFeedbackElement(input) {
+                const feedback = document.createElement('div');
+                feedback.className = 'invalid-feedback';
+                input.parentNode.appendChild(feedback);
+                return feedback;
+            }
+
+            setupCustomValidationMessages() {
+                const form = document.getElementById('newsletter-form');
+                const inputs = form.querySelectorAll('input[required]');
+                
+                inputs.forEach(input => {
+                    input.addEventListener('invalid', (e) => {
+                        e.preventDefault();
+                        const messages = {
+                            en: {
+                                valueMissing: 'This field is required.',
+                                typeMismatch: 'Please enter a valid value.',
+                                tooShort: 'Please enter at least 2 characters.'
+                            },
+                            ar: {
+                                valueMissing: 'هذا الحقل مطلوب.',
+                                typeMismatch: 'يرجى إدخال قيمة صحيحة.',
+                                tooShort: 'يرجى إدخال حرفين على الأقل.'
+                            }
+                        };
+                        
+                        const validity = input.validity;
+                        let message = messages[this.currentLang].valueMissing;
+                        
+                        if (validity.typeMismatch) {
+                            message = messages[this.currentLang].typeMismatch;
+                        } else if (validity.tooShort) {
+                            message = messages[this.currentLang].tooShort;
+                        }
+                        
+                        input.setCustomValidity(message);
+                        this.setValidationState(input, false, message);
+                    });
+                    
+                    input.addEventListener('input', () => {
+                        input.setCustomValidity('');
+                    });
+                });
+            }
+
+            async handleNewsletterSubmission(e) {
+                e.preventDefault();
+                
+                const form = e.target;
+                const formData = new FormData(form);
+                
+                // Validate all fields
+                const firstName = document.getElementById('firstName');
+                const email = document.getElementById('email');
+                const consent = document.getElementById('updates-consent');
+                
+                const isValidName = this.validateName(firstName);
+                const isValidEmail = this.validateEmail(email);
+                const hasConsent = consent.checked;
+                
+                if (!hasConsent) {
+                    consent.focus();
+                    alert(this.currentLang === 'en' ? 
+                        'Please agree to receive updates.' :
+                        'يرجى الموافقة على تلقي التحديثات.');
+                    return;
+                }
+                
+                if (isValidName && isValidEmail && hasConsent) {
+                    this.submitNewsletter(formData);
+                }
+            }
+
+            async submitNewsletter(formData) {
+                const submitButton = document.querySelector('#newsletter-form button[type="submit"]');
+                const originalText = submitButton.textContent;
+                
+                // Show loading state
+                submitButton.disabled = true;
+                submitButton.innerHTML = this.currentLang === 'en' ? 
+                    '<i class="bi bi-hourglass-split me-2"></i>Subscribing...' :
+                    '<i class="bi bi-hourglass-split me-2"></i>جاري الاشتراك...';
+                
+                try {
+                    // Simulate API call
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+                    
+                    // Success message
+                    this.showSuccessMessage();
+                    document.getElementById('newsletter-form').reset();
+                    
+                } catch (error) {
+                    this.showErrorMessage();
+                } finally {
+                    // Restore button
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalText;
+                }
+            }
+
+            showSuccessMessage() {
+                const message = this.currentLang === 'en' ?
+                    'Thank you for subscribing! Check your email for confirmation.' :
+                    'شكراً لك على الاشتراك! تحقق من بريدك الإلكتروني للتأكيد.';
+                
+                this.showToast(message, 'success');
+            }
+
+            showErrorMessage() {
+                const message = this.currentLang === 'en' ?
+                    'Something went wrong. Please try again later.' :
+                    'حدث خطأ ما. يرجى المحاولة مرة أخرى لاحقاً.';
+                
+                this.showToast(message, 'error');
+            }
+
+            showToast(message, type) {
+                // Create toast notification
+                const toast = document.createElement('div');
+                toast.className = `alert alert-${type === 'success' ? 'success' : 'danger'} position-fixed`;
+                toast.style.cssText = `
+                    top: 20px;
+                    right: 20px;
+                    z-index: 9999;
+                    min-width: 300px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                `;
+                toast.textContent = message;
+                
+                document.body.appendChild(toast);
+                
+                // Auto remove after 5 seconds
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    setTimeout(() => {
+                        if (toast.parentNode) {
+                            toast.parentNode.removeChild(toast);
+                        }
+                    }, 300);
+                }, 5000);
+            }
+        }
+
+        // Initialize localization when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new IntelLocalization();
+        });
+
+        // Performance monitoring
+        window.addEventListener('load', () => {
+            // Check for Lighthouse accessibility score
+            if (typeof window.performance !== 'undefined') {
+                const perfData = window.performance.timing;
+                const loadTime = perfData.loadEventEnd - perfData.navigationStart;
+                console.log(`Page load time: ${loadTime}ms`);
+            }
+        });
+<script/>

@@ -1,0 +1,39 @@
+/* RTL Styles for Intel Localization Project */
+
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+header {
+    text-align: right;
+}
+
+h1, h2, h3 {
+    text-align: right;
+}
+
+section {
+    text-align: right;
+}
+
+a {
+    text-align: right;
+}
+
+footer {
+    text-align: right;
+}
+
+/* Adjustments for the three-column layout */
+.three-column {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order for RTL */
+}
+
+.three-column div {
+    margin-left: 20px; /* Adjust margin for RTL */
+    margin-right: 0; /* Remove right margin */
+}
+
+/* Additional RTL specific styles can be added below */

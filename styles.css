@@ -1,0 +1,248 @@
+/* Intel Brand Colors and Global Styles */
+:root {
+    --intel-blue: #0071C5;
+    --intel-blue-dark: #005496;
+    --intel-gray: #6B7280;
+    --intel-light-gray: #F3F4F6;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Intel Brand Colors */
+.bg-intel-blue {
+    background-color: var(--intel-blue) !important;
+}
+
+.text-intel-blue {
+    color: var(--intel-blue) !important;
+}
+
+.btn-intel-blue {
+    background-color: var(--intel-blue);
+    border-color: var(--intel-blue);
+    color: white;
+}
+
+.btn-intel-blue:hover {
+    background-color: var(--intel-blue-dark);
+    border-color: var(--intel-blue-dark);
+    color: white;
+}
+
+.btn-outline-intel-blue {
+    color: var(--intel-blue);
+    border-color: var(--intel-blue);
+}
+
+.btn-outline-intel-blue:hover {
+    background-color: var(--intel-blue);
+    border-color: var(--intel-blue);
+    color: white;
+}
+
+/* RTL Support */
+body[dir="rtl"] {
+    text-align: right;
+}
+
+body[dir="rtl"] .navbar-nav {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+body[dir="rtl"] .navbar-brand {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+body[dir="rtl"] .carousel-control-prev {
+    right: 0;
+    left: auto;
+}
+
+body[dir="rtl"] .carousel-control-next {
+    left: 0;
+    right: auto;
+}
+
+body[dir="rtl"] .text-md-end {
+    text-align: right !important;
+}
+
+body[dir="rtl"] .me-3 {
+    margin-right: 0 !important;
+    margin-left: 1rem !important;
+}
+
+body[dir="rtl"] .me-2 {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+
+body[dir="rtl"] .ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--intel-light-gray) 0%, #ffffff 100%);
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+/* Card Hover Effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* Social Links */
+.social-links a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--intel-blue) !important;
+    transform: translateY(-2px);
+}
+
+/* Newsletter Form */
+#newsletter-form {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Form Enhancements */
+.form-control:focus {
+    border-color: var(--intel-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0, 113, 197, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: var(--intel-blue);
+    border-color: var(--intel-blue);
+}
+
+/* Accessibility Enhancements */
+.btn:focus,
+.form-control:focus,
+.form-check-input:focus {
+    outline: 2px solid var(--intel-blue);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .card {
+        border: 2px solid #000;
+    }
+    
+    .btn-intel-blue {
+        border: 2px solid #000;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    .card,
+    .social-links a {
+        transition: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .carousel,
+    #newsletter {
+        display: none;
+    }
+    
+    .hero-section {
+        background: white;
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .social-links a {
+        font-size: 1.25rem;
+    }
+}
+
+/* Language toggle button */
+#language-toggle {
+    transition: all 0.3s ease;
+}
+
+#language-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+/* Loading animation */
+.loading {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--intel-light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--intel-blue);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--intel-blue-dark);
+}

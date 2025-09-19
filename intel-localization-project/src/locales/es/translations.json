@@ -1,0 +1,71 @@
+{
+  "header": {
+    "title": "Sostenibilidad a través de las épocas",
+    "description": "Explora el viaje de Intel a través del tiempo, descubriendo cómo nuestro compromiso con la innovación ha dado forma a un futuro más sostenible para la tecnología y nuestro planeta."
+  },
+  "timeline": {
+    "1968": {
+      "title": "Intel Fundada",
+      "description": "Robert Noyce y Gordon Moore renombraron la recién formada compañía NM Electronics a Intel Corporation, sentando las bases para décadas de innovación tecnológica."
+    },
+    "1971": {
+      "title": "Primer Microprocesador",
+      "description": "Intel presenta el 4004, el primer microprocesador comercial del mundo, encendiendo la revolución del microprocesador y propulsando el futuro de los dispositivos de computación."
+    },
+    "1978": {
+      "title": "Procesador 8086",
+      "description": "Lanzamiento del procesador 8086, estableciendo la arquitectura x86 que impulsa innumerables PC y servidores en la era moderna."
+    },
+    "1985": {
+      "title": "Procesador 386",
+      "description": "Intel introduce el procesador 386 con arquitectura de 32 bits, marcando el inicio de una nueva era de rendimiento y multitarea para las computadoras personales."
+    },
+    "2006": {
+      "title": "Pico de Emisiones de GHG",
+      "description": "Este año marca las emisiones anuales más altas de gases de efecto invernadero de Intel para sus operaciones. En los años siguientes, Intel invierte fuertemente en abatimiento químico, energía renovable y fabricación eficiente en energía para revertir esta tendencia."
+    },
+    "2020": {
+      "title": "Estrategia RISE",
+      "description": "Intel lanza su estrategia RISE (Responsable, Inclusivo, Sostenible, Habilitador) y objetivos para 2030, con el objetivo de impulsar el progreso en la acción climática, la gestión del agua y la reducción de residuos en toda la industria."
+    },
+    "2022": {
+      "title": "Cero Neto para 2040",
+      "description": "Intel anuncia su compromiso de lograr cero emisiones netas de gases de efecto invernadero (Alcance 1 y 2) en sus operaciones globales para 2040, basándose en años de iniciativas ambientales."
+    },
+    "2023": {
+      "title": "Electricidad Renovable",
+      "description": "La compañía logra un uso del 99% de electricidad renovable en todo el mundo, ayudando a reducir drásticamente las emisiones de carbono y avanzando hacia los objetivos de sostenibilidad a largo plazo de Intel."
+    },
+    "2024": {
+      "title": "Cumbre de Sostenibilidad",
+      "description": "Intel organiza su primera Cumbre de Sostenibilidad, uniendo a proveedores, funcionarios gubernamentales y líderes de la industria para colaborar en la fabricación de semiconductores sostenibles de próxima generación."
+    }
+  },
+  "threeColumn": {
+    "riseStrategy": {
+      "title": "Estrategia RISE",
+      "description": "Bajo su estrategia RISE (Responsable, Inclusivo, Sostenible, Habilitador), Intel establece objetivos ambiciosos para 2030, incluyendo impulsar el progreso en la acción climática, la gestión del agua y la reducción de residuos."
+    },
+    "commitment": {
+      "title": "Compromiso",
+      "description": "En 2022, Intel se comprometió a lograr cero emisiones netas de gases de efecto invernadero (Alcance 1 y 2) para 2040. Este compromiso se basa en décadas de iniciativas ambientales y asociaciones en toda la industria de semiconductores."
+    },
+    "waterWaste": {
+      "title": "Agua y Residuos",
+      "description": "Intel conserva miles de millones de galones de agua anualmente y colabora con comunidades locales para restaurar cuencas hidrográficas. Intel también recicla y reutiliza materiales para reducir residuos y avanzar hacia una economía circular."
+    }
+  },
+  "newsletter": {
+    "title": "Suscríbete a nuestro boletín",
+    "placeholder": "Introduce tu correo electrónico",
+    "button": "Suscribirse"
+  },
+  "footer": {
+    "socialMedia": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
+    },
+    "copyright": "© 2023 Intel Corporation. Todos los derechos reservados."
+  }
+}

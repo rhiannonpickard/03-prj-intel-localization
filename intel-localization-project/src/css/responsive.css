@@ -1,0 +1,60 @@
+/* Responsive styles for the Intel localization project */
+
+/* General styles for the three-column layout */
+@media (max-width: 1200px) {
+  .three-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .three-column div {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Styles for medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .three-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .three-column div {
+    width: 30%;
+  }
+}
+
+/* Styles for large screens */
+@media (min-width: 1200px) {
+  .three-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .three-column div {
+    width: 30%;
+  }
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adjustments for accessibility */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* RTL support */
+body[dir="rtl"] .three-column {
+  flex-direction: row-reverse;
+}
