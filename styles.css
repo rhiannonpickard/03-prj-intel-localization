@@ -246,3 +246,130 @@ body[dir="rtl"] .ms-auto {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--intel-blue-dark);
 }
+
+/* Summit Check-In Specific Styles */
+#summit-checkin body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#summit-checkin form {
+    margin-bottom: 20px;
+}
+
+/* Enhanced progress container for Summit Check-In */
+#summit-checkin .progress-container {
+    width: 100%;
+    height: 30px;
+    background: var(--intel-light-gray);
+    border-radius: 8px;
+    margin: 10px 0;
+    border: 2px solid var(--intel-blue);
+}
+
+/* Custom progress bar styling for Summit Check-In */
+#summit-checkin #progressBar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--intel-blue) 0%, var(--intel-blue-dark) 100%);
+    border-radius: 6px;
+    transition: width 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Celebration message styling */
+#summit-checkin #celebration {
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--intel-blue);
+    font-size: 1.2rem;
+    text-align: center;
+    animation: celebration-pulse 2s ease-in-out infinite;
+}
+
+@keyframes celebration-pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Team badge colors for Summit Check-In */
+#summit-checkin .badge.bg-primary {
+    background-color: #0ea5e9 !important; /* Water blue */
+}
+
+#summit-checkin .badge.bg-success {
+    background-color: #22c55e !important; /* Green for Net Zero */
+}
+
+#summit-checkin .badge.bg-warning {
+    background-color: #f59e0b !important; /* Orange for Renewables */
+}
+
+/* Summit Check-In form enhancements */
+#summit-checkin .form-control,
+#summit-checkin .form-select {
+    border: 2px solid var(--intel-light-gray);
+    transition: all 0.3s ease;
+}
+
+#summit-checkin .form-control:focus,
+#summit-checkin .form-select:focus {
+    border-color: var(--intel-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0, 113, 197, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Greeting message styling */
+#summit-checkin #greeting {
+    border-left: 4px solid var(--intel-blue);
+    animation: slide-in 0.5s ease-out;
+}
+
+@keyframes slide-in {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Attendee list enhancements */
+#summit-checkin #attendeeList .list-group-item {
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#summit-checkin #attendeeList .list-group-item:hover {
+    border-left-color: var(--intel-blue);
+    background-color: var(--intel-light-gray);
+    transform: translateX(5px);
+}
+
+/* Count cards styling */
+#summit-checkin .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#summit-checkin .card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+/* RTL support for Summit Check-In */
+body[dir="rtl"] #summit-checkin .card {
+    text-align: right;
+}
+
+body[dir="rtl"] #summit-checkin .d-flex.justify-content-between {
+    flex-direction: row-reverse;
+}
+
+body[dir="rtl"] #summit-checkin .badge {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}

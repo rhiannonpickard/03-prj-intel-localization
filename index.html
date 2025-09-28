@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intel Global Website</title>
+    <title>Intel Global Website - Summit Check-In</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -43,6 +43,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#newsletter" data-en="Newsletter" data-ar="النشرة الإخبارية">Newsletter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#summit-checkin" data-en="Summit Check-In" data-ar="تسجيل الوصول للقمة">Summit Check-In</a>
                         </li>
                     </ul>
                 </div>
@@ -252,6 +255,97 @@
                 </div>
             </div>
         </section>
+
+        <!-- Summit Check-In Section -->
+        <section id="summit-checkin" class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-center mb-4 text-intel-blue" data-en="Intel Sustainability Summit Check-In" data-ar="تسجيل الوصول لقمة إنتل للاستدامة">
+                            Intel Sustainability Summit Check-In
+                        </h2>
+                        
+                        <form id="checkInForm" class="bg-white p-4 rounded shadow mb-5">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="attendeeName" class="form-label" data-en="Your Name" data-ar="اسمك">Your Name</label>
+                                    <input type="text" class="form-control" id="attendeeName" placeholder="Enter your name" required 
+                                           data-en-placeholder="Enter your name" data-ar-placeholder="أدخل اسمك">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="teamSelect" class="form-label" data-en="Choose Your Team" data-ar="اختر فريقك">Choose Your Team</label>
+                                    <select id="teamSelect" class="form-select" required>
+                                        <option value="" data-en="Choose your team" data-ar="اختر فريقك">Choose your team</option>
+                                        <option value="water" data-en="Team Water Wise" data-ar="فريق الحكمة المائية">Team Water Wise</option>
+                                        <option value="netzero" data-en="Team Net Zero" data-ar="فريق الصفر الصافي">Team Net Zero</option>
+                                        <option value="renewables" data-en="Team Renewables" data-ar="فريق الطاقة المتجددة">Team Renewables</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-intel-blue btn-lg px-5" data-en="Check In" data-ar="تسجيل الدخول">
+                                        <i class="bi bi-check-circle me-2"></i>Check In
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div id="greeting" class="alert alert-success text-center mb-4" style="display: none;"></div>
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <h3 class="card-title text-intel-blue" data-en="Total Attendance" data-ar="إجمالي الحضور">Total Attendance</h3>
+                                        <h2 class="display-4 text-intel-blue" id="totalCount">0</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title text-intel-blue mb-3" data-en="Team Counts" data-ar="عدد الفرق">Team Counts</h4>
+                                        <ul class="list-unstyled">
+                                            <li class="d-flex justify-content-between mb-2">
+                                                <span data-en="Water Wise" data-ar="الحكمة المائية">Water Wise:</span>
+                                                <span id="waterCount" class="badge bg-intel-blue">0</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between mb-2">
+                                                <span data-en="Net Zero" data-ar="الصفر الصافي">Net Zero:</span>
+                                                <span id="netzeroCount" class="badge bg-intel-blue">0</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between">
+                                                <span data-en="Renewables" data-ar="الطاقة المتجددة">Renewables:</span>
+                                                <span id="renewablesCount" class="badge bg-intel-blue">0</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <h4 class="text-center mb-3 text-intel-blue" data-en="Progress Toward Goal" data-ar="التقدم نحو الهدف">Progress Toward Goal</h4>
+                            <div class="progress mb-3" style="height: 30px;">
+                                <div id="progressBar" class="progress-bar bg-intel-blue" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                            </div>
+                            <div id="celebration" class="alert alert-warning text-center" style="display: none;"></div>
+                        </div>
+
+                        <div class="mt-5">
+                            <h4 class="text-center mb-3 text-intel-blue" data-en="Attendee List" data-ar="قائمة الحاضرين">Attendee List</h4>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul id="attendeeList" class="list-group list-group-flush"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -376,6 +470,7 @@
             constructor() {
                 this.currentLang = 'en';
                 this.currentDir = 'ltr';
+                this.GOAL = 10; // Goal for attendance
                 this.init();
             }
 
@@ -385,6 +480,7 @@
                 this.setupSmoothScrolling();
                 this.setupFormValidation();
                 this.updatePlaceholders();
+                this.loadSavedData(); // Load saved data on initialization
             }
 
             detectBrowserLanguage() {
@@ -413,6 +509,14 @@
                 if (newsletterForm) {
                     newsletterForm.addEventListener('submit', (e) => {
                         this.handleNewsletterSubmission(e);
+                    });
+                }
+
+                // Summit Check-In form submission
+                const checkInForm = document.getElementById('checkInForm');
+                if (checkInForm) {
+                    checkInForm.addEventListener('submit', (e) => {
+                        this.handleSummitCheckIn(e);
                     });
                 }
 
@@ -732,11 +836,236 @@
                     }, 300);
                 }, 5000);
             }
+            handleSummitCheckIn(e) {
+                e.preventDefault();
+                
+                const nameInput = document.getElementById('attendeeName');
+                const teamSelect = document.getElementById('teamSelect');
+                const name = nameInput.value.trim();
+                const team = teamSelect.value;
+                
+                // Validate inputs
+                if (!name || !team) {
+                    alert(this.currentLang === 'en' ? 
+                        'Please fill in all fields.' :
+                        'يرجى ملء جميع الحقول.');
+                    return;
+                }
+
+                // Add attendee to localStorage
+                const success = this.addAttendee(name, team);
+                
+                if (success) {
+                    // Show personalized greeting
+                    this.showGreeting(name, team);
+                    
+                    // Update counts and progress (render function)
+                    this.updateCounts();
+                    
+                    // Reset form
+                    document.getElementById('checkInForm').reset();
+                }
+            }
+
+            addAttendee(name, team) {
+                let attendees = JSON.parse(localStorage.getItem('summitAttendees') || '[]');
+                
+                // Check if already checked in
+                const existing = attendees.find(a => a.name.toLowerCase() === name.toLowerCase());
+                if (existing) {
+                    alert(this.currentLang === 'en' ? 
+                        `${name} is already checked in!` :
+                        `${name} مسجل بالفعل!`);
+                    return false;
+                }
+                
+                const attendee = {
+                    name: name,
+                    team: team,
+                    timestamp: new Date().toISOString()
+                };
+                
+                attendees.push(attendee);
+                localStorage.setItem('summitAttendees', JSON.stringify(attendees));
+                
+                // Save total and teams for compatibility
+                const total = attendees.length;
+                const teams = this.getTeamCounts(attendees);
+                localStorage.setItem('total', total);
+                localStorage.setItem('teams', JSON.stringify(teams));
+                
+                // Update attendee list display
+                this.updateAttendeeList();
+                return true;
+            }
+
+            getTeamCounts(attendees) {
+                const teams = { water: 0, netzero: 0, renewables: 0 };
+                attendees.forEach(attendee => {
+                    if (teams.hasOwnProperty(attendee.team)) {
+                        teams[attendee.team]++;
+                    }
+                });
+                return teams;
+            }
+
+            loadSavedData() {
+                // Load from localStorage on page load (LevelUp feature)
+                if (localStorage.getItem('total')) {
+                    const total = parseInt(localStorage.getItem('total'));
+                    const teams = JSON.parse(localStorage.getItem('teams') || '{"water":0,"netzero":0,"renewables":0}');
+                    
+                    // Update displays with saved data
+                    this.updateCounts();
+                    this.updateAttendeeList();
+                }
+            }
+
+            showGreeting(name, team) {
+                const greeting = document.getElementById('greeting');
+                const teamNames = {
+                    water: this.currentLang === 'en' ? 'Team Water Wise' : 'فريق الحكمة المائية',
+                    netzero: this.currentLang === 'en' ? 'Team Net Zero' : 'فريق الصفر الصافي',
+                    renewables: this.currentLang === 'en' ? 'Team Renewables' : 'فريق الطاقة المتجددة'
+                };
+                
+                // Personalized greeting matching the original functionality
+                const message = this.currentLang === 'en' ?
+                    `Welcome, ${name}! Thanks for checking in with ${teamNames[team]}.` :
+                    `مرحباً ${name}! شكراً لك على التسجيل مع ${teamNames[team]}.`;
+                
+                greeting.textContent = message;
+                greeting.style.display = 'block';
+                
+                // Hide after 5 seconds
+                setTimeout(() => {
+                    greeting.style.display = 'none';
+                }, 5000);
+            }
+
+            updateCounts() {
+                const attendees = JSON.parse(localStorage.getItem('summitAttendees') || '[]');
+                const teamCounts = this.getTeamCounts(attendees);
+                const total = attendees.length;
+                
+                // Update displays (render function)
+                document.getElementById('totalCount').textContent = total;
+                document.getElementById('waterCount').textContent = teamCounts.water;
+                document.getElementById('netzeroCount').textContent = teamCounts.netzero;
+                document.getElementById('renewablesCount').textContent = teamCounts.renewables;
+                
+                // Update progress with configurable goal
+                const progress = Math.min((total / this.GOAL) * 100, 100);
+                const progressBar = document.getElementById('progressBar');
+                
+                progressBar.style.width = `${progress}%`;
+                progressBar.setAttribute('aria-valuenow', progress);
+                progressBar.textContent = `${Math.round(progress)}%`;
+                
+                // Check for celebration when goal is reached
+                this.checkCelebration(total, teamCounts);
+            }
+
+            checkCelebration(total, teams) {
+                if (total >= this.GOAL) {
+                    // Find winning team (team with strongest turnout)
+                    let winningTeam = Object.keys(teams).reduce((a, b) =>
+                        teams[a] > teams[b] ? a : b
+                    );
+                    
+                    const teamDisplayNames = {
+                        water: this.currentLang === 'en' ? 'Water Wise' : 'الحكمة المائية',
+                        netzero: this.currentLang === 'en' ? 'Net Zero' : 'الصفر الصافي',
+                        renewables: this.currentLang === 'en' ? 'Renewables' : 'الطاقة المتجددة'
+                    };
+                    
+                    const message = this.currentLang === 'en' ?
+                        `🎉 Goal reached! ${teamDisplayNames[winningTeam]} has the strongest turnout! 🎉` :
+                        `🎉 تم تحقيق الهدف! ${teamDisplayNames[winningTeam]} حقق أعلى معدل حضور! 🎉`;
+                    
+                    this.showCelebration(message);
+                }
+            }
+
+            showCelebration(customMessage = null) {
+                const celebration = document.getElementById('celebration');
+                const message = customMessage || (this.currentLang === 'en' ?
+                    '🎉 Congratulations! We\'ve reached our attendance goal!' :
+                    '🎉 تهانينا! لقد وصلنا إلى هدف الحضور!');
+                
+                celebration.textContent = message;
+                celebration.style.display = 'block';
+            }
+
+            capitalize(word) {
+                return word.charAt(0).toUpperCase() + word.slice(1);
+            }
+
+            showCelebration() {
+                const celebration = document.getElementById('celebration');
+                const message = this.currentLang === 'en' ?
+                    '🎉 Congratulations! We\'ve reached our attendance goal!' :
+                    '🎉 تهانينا! لقد وصلنا إلى هدف الحضور!';
+                
+                celebration.textContent = message;
+                celebration.style.display = 'block';
+            }
+
+            updateAttendeeList() {
+                const attendees = JSON.parse(localStorage.getItem('summitAttendees') || '[]');
+                const attendeeList = document.getElementById('attendeeList');
+                
+                attendeeList.innerHTML = '';
+                
+                if (attendees.length === 0) {
+                    const emptyMessage = document.createElement('li');
+                    emptyMessage.className = 'list-group-item text-center text-muted';
+                    emptyMessage.textContent = this.currentLang === 'en' ?
+                        'No attendees yet. Be the first to check in!' :
+                        'لا يوجد حاضرون بعد. كن أول من يسجل!';
+                    attendeeList.appendChild(emptyMessage);
+                    return;
+                }
+                
+                // Sort by timestamp (most recent first)
+                attendees.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                
+                attendees.forEach(attendee => {
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item d-flex justify-content-between align-items-center';
+                    
+                    const teamNames = {
+                        water: this.currentLang === 'en' ? 'Water Wise' : 'الحكمة المائية',
+                        netzero: this.currentLang === 'en' ? 'Net Zero' : 'الصفر الصافي',
+                        renewables: this.currentLang === 'en' ? 'Renewables' : 'الطاقة المتجددة'
+                    };
+                    
+                    const teamColors = {
+                        water: 'bg-primary',
+                        netzero: 'bg-success',
+                        renewables: 'bg-warning'
+                    };
+                    
+                    li.innerHTML = `
+                        <div>
+                            <strong>${attendee.name}</strong>
+                            <small class="text-muted d-block">${new Date(attendee.timestamp).toLocaleString()}</small>
+                        </div>
+                        <span class="badge ${teamColors[attendee.team]}">${teamNames[attendee.team]}</span>
+                    `;
+                    
+                    attendeeList.appendChild(li);
+                });
+            }
         }
 
         // Initialize localization when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
-            new IntelLocalization();
+            const intel = new IntelLocalization();
+            
+            // Initialize Summit Check-In displays
+            intel.updateCounts();
+            intel.updateAttendeeList();
         });
 
         // Performance monitoring
